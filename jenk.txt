@@ -1,0 +1,24 @@
+ 1  sudo apt update -y && sudo apt upgrade -y
+
+ 2  sudo apt install openjdk-8-jdk -y
+
+ 3  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+ 4   echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+ 5  sudo apt-get update -y
+
+ 6   sudo apt-get install fontconfig openjdk-11-jre -y
+
+ 7   java -version
+
+ 8   sudo systemctl start jenkins
+
+ 9    sudo systemctl enable jenkins
+
+ 10   sudo systemctl status jenkins
+
+ 11   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
