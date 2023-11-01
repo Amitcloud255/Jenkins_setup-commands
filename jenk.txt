@@ -15,10 +15,12 @@
 
  7   java -version
 
- 8   sudo systemctl start jenkins
+ 8   sudo apt install jenkins -y
 
- 9    sudo systemctl enable jenkins
+ 9   sudo systemctl start jenkins
 
- 10   sudo systemctl status jenkins
+ 10   sudo systemctl enable jenkins
 
- 11   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+ 11   sudo systemctl status jenkins
+
+ 12   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
